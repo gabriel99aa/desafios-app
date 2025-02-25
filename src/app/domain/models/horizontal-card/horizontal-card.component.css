@@ -1,0 +1,128 @@
+main {
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.card-shine {
+  position: absolute;
+  top: 1;
+  left: 1;
+  translate: -30px -28px;
+  width: 90px; /* Ajusta según necesites */
+  height: 90px; /* Ajusta según necesites */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.6),
+    transparent 65%
+  );
+  border-radius: 50px; /* Bordes redondeados para coincidir con la tarjeta */
+  pointer-events: none; /* Evita que el brillo interfiera con otros elementos */
+  z-index: 1; /* Asegura que el brillo esté encima del fondo pero debajo del contenido */
+}
+
+/* Estilo principal para las tarjetas horizontales */
+.horizontal-card {
+  background: white;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 8px solid gray;
+  padding: 5px;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* Estilo para la imagen dentro de la tarjeta */
+.card-image img {
+  width: 95px; /* Ancho fijo para la imagen dentro de la tarjeta en tamaños no especificados por media queries */
+  height: 100%; /* La imagen ocupa el 100% de la altura del contenedor */
+}
+
+/* Estilo para la tarjeta cuando el porcentaje es inferior al 100% */
+.card-below-100 {
+  border-color: gray; /* Borde gris para tarjetas con porcentaje inferior al 100% */
+}
+
+/* Estilo para la tarjeta cuando el porcentaje es igual o superior al 100% */
+.card-above-100 {
+  border-color: gray; /* Borde gris también para tarjetas con porcentaje igual o superior al 100% */
+}
+
+/* Colores de texto según el estado del porcentaje */
+.text-below-100 {
+  color: red; /* Texto rojo para cuando el porcentaje es inferior al 100% */
+}
+
+.text-above-100 {
+  color: green; /* Texto verde para cuando el porcentaje es igual o superior al 100% */
+}
+
+/* Contenido principal de la tarjeta */
+.card-content {
+  display: flex;
+  flex-direction: column; /* Organiza el contenido en una columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  flex-grow: 1; /* Permite que el contenido crezca para ocupar el espacio disponible */
+}
+
+/* Estilo para el círculo de progreso */
+.progress-circle {
+  position: relative; /* Posiciona elementos hijos en relación al contenedor */
+  width: 75px; /* Ancho del círculo de progreso */
+  height: 75px; /* Altura del círculo de progreso */
+  margin: 0; /* Elimina márgenes alrededor del círculo */
+}
+
+.progress-circle svg {
+  width: 100%; /* El SVG ocupa el 100% del contenedor */
+  height: 100%;
+  transform: rotate(
+    -90deg
+  ); /* Rota el círculo 90 grados para que empiece desde la parte superior */
+}
+
+/* Fondo del círculo de progreso */
+.circle-background {
+  fill: none; /* Sin relleno para el círculo */
+  stroke: #e6e6e6; /* Color de trazo gris claro */
+  stroke-width: 12px; /* Ancho del trazo del círculo de fondo */
+}
+
+/* Progreso del círculo */
+.circle-progress {
+  fill: none; /* Sin relleno */
+  stroke-width: 12px; /* Ancho del trazo de progreso */
+  stroke-linecap: round; /* Extremos del trazo redondeados */
+  transition: stroke-dashoffset 0.4s ease; /* Transición suave para el progreso */
+}
+
+/* Texto que muestra el porcentaje dentro del círculo de progreso */
+.percentage {
+  position: absolute; /* Posiciona el texto en el centro del círculo */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto en ambos ejes */
+  font-size: 1.3em; /* Tamaño de fuente mayor para resaltar el porcentaje */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para el texto dentro de la tarjeta */
+.card-text {
+  align-items: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilo para los párrafos dentro de la tarjeta */
+.card-text p {
+  font-size: 0.7em; /* Tamaño de fuente reducido */
+  margin: 0; /* Elimina márgenes adicionales */
+}

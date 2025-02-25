@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: auto;
+  translate: -10px 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: #ffb400; /* Color dorado */
+  text-align: center; /* Centra el texto en relación al contenedor */
+  line-height: 0.05; /* Ajusta la altura de la línea, reduce el espacio entre líneas */
+  background: linear-gradient(
+    90deg,
+    #b67937 0%,
+    #be8c3c 5%,
+    #be8c3c 10%,
+    #d3b15f 15%,
+    #faf0a0 20%,
+    #ffffc2 25%,
+    #faf0a0 30%,
+    #d3b15f 35%,
+    #be8c3c 40%,
+    #b17b32 45%,
+    #bb8332 50%,
+    #d4a245 55%,
+    #e1b453 60%,
+    #a4692a 65%,
+    #be8c3c 70%,
+    #d3b15f 75%,
+    #faf0a0 80%,
+    #ffffc2 85%,
+    #faf0a0 90%,
+    #d3b15f 95%,
+    #b98043 100%
+  );
+  background-size: 200% 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: moveBackground 8s ease-in-out infinite;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animación para mover el fondo */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  font-size: 25px;
+  text-align: center; /* Centra el texto en relación al contenedor */
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px; /* Espacio adicional entre la imagen y el texto */
+}
+
+p {
+  margin: 15px; /* Centra el texto en relación al contenedor */
+  font-size: 14px;
+}
+
+.highlight {
+  color: #ffd700; /* Color dorado para el texto resaltado */
+  font-weight: bold;
+}
+
+.user-info p {
+  font-size: 100%; /* Ajusta según lo necesites */
+  margin: auto; /* Elimina cualquier margen adicional */
+}

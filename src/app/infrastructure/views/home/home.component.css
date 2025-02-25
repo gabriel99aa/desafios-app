@@ -1,0 +1,98 @@
+.body-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.main {
+  background: url("/assets/FONDO-V2.png") no-repeat;
+  background-size: cover;
+  width: calc(100vw - 250px);
+  height: 100vh;
+}
+
+.main-container {
+  height: calc(100vh - 13vh);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffb400 transparent;
+  margin-top: 12vh;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height: 98px;
+  width: max-content;
+  gap: 1vw;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.infocomponent {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  translate: 0 -20px;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  padding-top: 20px;
+}
+
+.card-row {
+  display: flex;
+  gap: 5vw;
+}
+
+.card-row-horizontal {
+  display: flex;
+  gap: 4vw;
+}
+
+.footer {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1280px) {
+  .card-row {
+    gap: 4vw;
+  }
+  .card-row-horizontal {
+    gap: 3vw;
+    padding-left: 3px;
+  }
+}
+
+@media (min-width: 1281px) {
+  .card-container {
+    align-items: center;
+  }
+
+  .info {
+    width: auto;
+    gap: 5vw;
+  }
+
+  .infocomponent {
+    margin-left: 10px;
+    width: max-content;
+  }
+
+  .infocomponent {
+    width: max-content;
+  }
+}

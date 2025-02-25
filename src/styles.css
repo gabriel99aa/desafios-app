@@ -1,0 +1,16 @@
+/* Gloal Config */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: auto;
+  }
+}

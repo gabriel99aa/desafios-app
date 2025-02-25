@@ -1,0 +1,156 @@
+.vertical-card {
+  width: 140px; /* Ajusta el tamaño de la tarjeta */
+  height: 180px; /* Ajusta la altura de la tarjeta */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 5px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.card-background {
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 92%;
+  border-radius: 15px; /* Redondea las esquinas */
+  overflow: hidden; /* Oculta cualquier desbordamiento de contenido */
+  text-align: center; /* Centra el texto dentro de la tarjeta */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Agrega sombra para dar profundidad */
+  transition: transform 0.3s ease; /* Anima la transformación de la tarjeta */
+  padding: 7px; /* Añade espacio dentro de la tarjeta */
+  background: white;
+}
+
+/* Estilos condicionales según el valor de los puntos */
+.card-below-100 {
+  background: gold; /* Cambia el color del borde a dorado si los puntos son menores de 100 */
+  border-radius: 20px;
+}
+
+.card-above-100 {
+  background: linear-gradient(
+    90deg,
+    #b67937 0%,
+    #be8c3c 5%,
+    #be8c3c 10%,
+    #d3b15f 15%,
+    #faf0a0 20%,
+    #ffffc2 25%,
+    #faf0a0 30%,
+    #d3b15f 35%,
+    #be8c3c 40%,
+    #b17b32 45%,
+    #bb8332 50%,
+    #d4a245 55%,
+    #e1b453 60%,
+    #a4692a 65%,
+    #be8c3c 70%,
+    #d3b15f 75%,
+    #faf0a0 80%,
+    #ffffc2 85%,
+    #faf0a0 90%,
+    #d3b15f 95%,
+    #b98043 100%
+  );
+  background-size: 200% 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: moveBackground 10s ease-in-out infinite;
+  border-radius: 15px;
+}
+
+/* Animación para mover el fondo */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Estilo del texto según el valor de los puntos */
+.text-below-100 {
+  color: red; /* Cambia el color del texto a rojo si los puntos son menores de 100 */
+}
+
+.text-above-100 {
+  color: green; /* Cambia el color del texto a verde si los puntos son mayores de 100 */
+}
+
+/* Estilo de la imagen dentro de la tarjeta */
+.card-image img {
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: 45px; /* Mantiene la proporción de la imagen */
+  margin: 0; /* Centra la imagen horizontalmente */
+}
+
+/* Estilo del círculo de progreso */
+.progress-circle {
+  position: relative;
+  width: 75px; /* Ajusta el tamaño del círculo de progreso */
+  height: 75px; /* Ajusta el tamaño del círculo de progreso */
+  margin: 0 auto; /* Centra el círculo dentro de la tarjeta */
+}
+
+.progress-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(
+    -90deg
+  ); /* Rota el SVG para que el progreso inicie desde la parte superior */
+}
+
+.circle-background {
+  fill: none;
+  stroke: #e6e6e6; /* Color de fondo del círculo */
+  stroke-width: 14px; /* Ajusta el grosor del fondo del círculo */
+}
+
+.circle-progress {
+  fill: none;
+  stroke-width: 14px; /* Ajusta el grosor del círculo de progreso */
+  stroke-linecap: round; /* Hace que el final del trazo sea redondeado */
+  transition: stroke-dashoffset 0.4s ease; /* Añade una animación suave al progreso */
+}
+
+/* Estilo del texto del porcentaje */
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto dentro del círculo */
+  font-size: 1.2em; /* Ajusta el tamaño del texto */
+  font-weight: bold; /* Hace que el texto sea más grueso */
+}
+
+/* Estilo del texto dentro de la tarjeta */
+.card-text {
+  margin-top: 2px; /* Añade espacio en la parte superior del texto */
+}
+
+.card-text p {
+  font-size: 0.65em; /* Ajusta el tamaño del texto */
+  margin: 0; /* Añade espacio vertical entre los párrafos */
+}

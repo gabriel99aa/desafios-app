@@ -1,0 +1,64 @@
+<div class="body-container">
+  <!-- Sidebar -->
+  <app-sidebar [fd]="fd"></app-sidebar>
+
+  <!-- Main content -->
+  <div class="main">
+    <!-- div -->
+    <div class="main-container">
+      <!-- info components -->
+      <div class="info">
+        <app-guide-button></app-guide-button>
+        <app-logout></app-logout>
+        <app-acomulate-points [pdv]="pdv"></app-acomulate-points>
+        <app-info class="infocomponent"></app-info>
+      </div>
+
+      <!-- Grid de las tarjetas  -->
+      <div class="card-container">
+        <!-- Tarjetas verticales -->
+        <div class="card-row">
+          <app-vertical-card
+            *ngFor="let item of marca.slice(0, 5)"
+            [imagenUrl]="item.url"
+            [imagenDoradaUrl]="item.urlDorada"
+            [puntos]="item.percentage"
+            [text]="item.text"
+            [subtext]="item.subtext"
+            [color]="item.color"
+          >
+          </app-vertical-card>
+        </div>
+
+        <!-- Más tarjetas verticales -->
+        <div class="card-row">
+          <app-vertical-card
+            *ngFor="let item of marca.slice(5, 10)"
+            [imagenUrl]="item.url"
+            [imagenDoradaUrl]="item.urlDorada"
+            [puntos]="item.percentage"
+            [text]="item.text"
+            [subtext]="item.subtext"
+            [color]="item.color"
+          >
+          </app-vertical-card>
+        </div>
+
+        <!-- Tarjetas horizontales -->
+        <div class="card-row-horizontal">
+          <app-horizontal-card
+            *ngFor="let item of marca.slice(10, 14)"
+            [imagenUrl]="item.url"
+            [imagenDoradaUrl]="item.urlDorada"
+            [puntos]="item.percentage"
+            [text]="item.text"
+            [subtext]="item.subtext"
+            [color]="item.color"
+          >
+          </app-horizontal-card>
+        </div>
+      </div>
+      <app-footer class="footer"></app-footer>
+    </div>
+  </div>
+</div>

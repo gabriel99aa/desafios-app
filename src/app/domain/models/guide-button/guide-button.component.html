@@ -1,0 +1,14 @@
+<label class="guide-container" (click)="onGuideButtonClick()">
+  <img src="/assets/boton-imprima-guia.png" alt="guia" class="guide-logo" />
+</label>
+
+<!-- Modal -->
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <div class="image-container">
+      <img [src]="imageSrc" alt="Generated Guide" />
+    </div>
+    <button (click)="downloadImage()">Descargar</button>
+  </div>
+</div>

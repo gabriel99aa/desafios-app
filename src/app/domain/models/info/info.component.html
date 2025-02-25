@@ -1,0 +1,12 @@
+<!-- INFO CONTENT -->
+<div class="info-content">
+  <div class="user-info">
+    <img class="user-img" src="/assets/user.png" alt="user-image" />
+    <p>Hola, {{ username }}</p>
+  </div>
+
+  <p *ngIf="location">
+    Así va <span class="highlight">{{ location }}</span>
+  </p>
+  <p>Hoy {{ date }}</p>
+</div>

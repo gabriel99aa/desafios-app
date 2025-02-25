@@ -1,0 +1,65 @@
+<main>
+  <!-- destello tarjeta -->
+  <div class="card-shine"></div>
+
+  <!-- Contenedor principal de la tarjeta con una clase condicional basada en el valor de 'puntos' -->
+  <div
+    [ngClass]="{
+      'card-below-100': puntos < 100,
+      'card-above-100': puntos >= 100,
+    }"
+    class="horizontal-card"
+  >
+    <!-- Sección para la imagen de la tarjeta -->
+    <div class="card-image">
+      <!-- Imagen que cambia según el valor de 'puntos' -->
+      <img
+        [src]="puntos < 100 ? imagenUrl : imagenDoradaUrl"
+        alt="Card Image"
+      />
+    </div>
+
+    <!-- Sección de contenido de la tarjeta -->
+    <div class="card-content">
+      <!-- Contenedor para el círculo de progreso -->
+      <div class="progress-circle">
+        <!-- SVG para el círculo de progreso -->
+        <svg viewBox="0 0 140 140">
+          <!-- Fondo del círculo de progreso -->
+          <circle cx="70" cy="70" r="60" class="circle-background"></circle>
+
+          <!-- Círculo de progreso que cambia según el valor de 'puntos' -->
+          <circle
+            [attr.stroke-dasharray]="strokeDashArray"
+            [attr.stroke-dashoffset]="dashOffset"
+            [attr.stroke]="puntos < 100 ? color : 'green'"
+            cx="70"
+            cy="70"
+            r="60"
+            class="circle-progress"
+          ></circle>
+        </svg>
+
+        <!-- Texto que muestra el porcentaje y cambia de clase según el valor de 'puntos' -->
+        <div
+          [ngClass]="{
+            'text-below-100': puntos < 100,
+            'text-above-100': puntos >= 100,
+          }"
+          class="percentage"
+        >
+          {{ puntos }}%
+        </div>
+      </div>
+
+      <!-- Texto adicional de la tarjeta -->
+      <div class="card-text">
+        <!-- Mensaje principal que cambia según el valor de 'puntos' -->
+        <p style="font-weight: 700">{{ text }}</p>
+
+        <!-- Mensaje secundario que también cambia según el valor de 'puntos' -->
+        <p>{{ subtext }}</p>
+      </div>
+    </div>
+  </div>
+</main>
