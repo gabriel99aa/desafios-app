@@ -1,0 +1,146 @@
+<main>
+  <!-- destello tarjeta -->
+  <div class="card-shine"></div>
+
+  <!-- Fondo Animado tarjeta -->
+  <div
+    [ngClass]="{
+      'card-below-100': puntos < 100,
+      'card-above-100': puntos >= 100,
+    }"
+    class="vertical-card-big"
+  >
+    <!-- fondo Blanco tarjeta -->
+    <div class="card-background-big">
+      <!-- logo marca -->
+      <div class="card-image">
+        <img
+          [src]="puntos <= 100 ? imagenUrl : imagenDoradaUrl"
+          alt="Card Image"
+        />
+      </div>
+
+      <!-- contenido -->
+      <div class="card-content">
+        <!-- circulo de progreso -->
+        <div class="progress-circle">
+          <!-- svg barra de progreso -->
+          <svg viewBox="0 0 140 140">
+            <defs>
+              <linearGradient id="gradientnn" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#b67937">
+                  <animate
+                    attributeName="stop-color"
+                    values="#b67937; #be8c3c; #d3b15f; #faf0a0; #ffffc2; #b67937"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="5%" stop-color="#be8c3c">
+                  <animate
+                    attributeName="stop-color"
+                    values="#be8c3c; #d3b15f; #faf0a0; #ffffc2; #b67937; #be8c3c"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="10%" stop-color="#d3b15f">
+                  <animate
+                    attributeName="stop-color"
+                    values="#d3b15f; #faf0a0; #ffffc2; #b67937; #be8c3c; #d3b15f"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="20%" stop-color="#faf0a0">
+                  <animate
+                    attributeName="stop-color"
+                    values="#faf0a0; #ffffc2; #b67937; #be8c3c; #d3b15f; #faf0a0"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="25%" stop-color="#ffffc2">
+                  <animate
+                    attributeName="stop-color"
+                    values="#ffffc2; #b67937; #be8c3c; #d3b15f; #faf0a0; #ffffc2"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="40%" stop-color="#b17b32">
+                  <animate
+                    attributeName="stop-color"
+                    values="#b17b32; #bb8332; #d4a245; #e1b453; #a4692a; #b17b32"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="50%" stop-color="#bb8332">
+                  <animate
+                    attributeName="stop-color"
+                    values="#bb8332; #d4a245; #e1b453; #a4692a; #b67937; #bb8332"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="75%" stop-color="#d4a245">
+                  <animate
+                    attributeName="stop-color"
+                    values="#d4a245; #e1b453; #a4692a; #b67937; #be8c3c; #d4a245"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="85%" stop-color="#e1b453">
+                  <animate
+                    attributeName="stop-color"
+                    values="#e1b453; #a4692a; #b67937; #be8c3c; #d3b15f; #e1b453"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+                <stop offset="100%" stop-color="#b98043">
+                  <animate
+                    attributeName="stop-color"
+                    values="#b98043; #b17b32; #be8c3c; #d3b15f; #faf0a0; #b98043"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </stop>
+              </linearGradient>
+            </defs>
+
+            <circle cx="70" cy="70" r="60" class="circle-background"></circle>
+            <circle
+              [attr.stroke-dasharray]="strokeDashArray"
+              [attr.stroke-dashoffset]="dashOffset"
+              [attr.stroke]="puntos < 100 ? color : 'url(#gradientnn)'"
+              cx="70"
+              cy="70"
+              r="60"
+              class="circle-progress"
+            ></circle>
+          </svg>
+
+          <!-- porcentaje -->
+          <div
+            [ngClass]="{
+              'text-below-100': puntos < 100,
+              'text-above-100': puntos >= 100,
+            }"
+            class="percentage"
+          >
+            {{ puntos }}%
+          </div>
+        </div>
+
+        <!-- texto de la tarjeta -->
+        <div class="card-text">
+          <p style="font-weight: 700">{{ text }}</p>
+          <p>{{ subtext }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

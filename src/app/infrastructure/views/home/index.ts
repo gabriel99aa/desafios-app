@@ -53,6 +53,15 @@ export const loading: {
     subtext: '',
   },
   {
+    id: 16,
+    url: 'assets/NORMAL/TRIPLETAZO.png',
+    urlDorada: 'assets/DORADOS/TRIPLETAZO-DORADO.png',
+    percentage: 0,
+    color: '#FFFFFF',
+    text: 'calculando...',
+    subtext: '',
+  },
+  {
     id: 6,
     url: 'assets/NORMAL/LOTERIAS.png',
     urlDorada: 'assets/DORADOS/LOTERIAS-DORADO.png',
@@ -144,15 +153,6 @@ export const loading: {
   },
   {
     id: 15,
-    url: 'assets/NORMAL/SUPERGIROS.png',
-    urlDorada: 'assets/NORMAL/SUPERGIROS.png',
-    percentage: 0,
-    color: '#FFFFFF',
-    text: 'calculando...',
-    subtext: '',
-  },
-  {
-    id: 16,
     url: 'assets/NORMAL/LOGO-AMIGOS-GANE.png',
     urlDorada: 'assets/DORADOS/LOGO-AMIGOS-GANE-DORADO.png',
     percentage: 0,
@@ -193,12 +193,13 @@ export const logosObjects = {
     url: 'assets/NORMAL/LOGO-SUPER-CHANCE.png',
     urlDorada: 'assets/DORADOS/LOGO-DORADO-SUPER-CHANCE.png',
   },
-  sg: {
-    id: 6,
+  tr: {
+    id: 16,
     name: 'sg',
-    url: 'assets/NORMAL/SUPER-GORDO.png',
-    urlDorada: 'assets/DORADOS/SUPER-GORDO-DORADO.png',
+    url: 'assets/NORMAL/TRIPLETAZO.png',
+    urlDorada: 'assets/DORADOS/TRIPLETAZO-DORADO.png',
   },
+
   lf: {
     id: 7,
     name: 'lf',
@@ -229,6 +230,12 @@ export const logosObjects = {
   //   url: 'assets/NORMAL/SUPER-ASTRO.png',
   //   urlDorada: 'assets/DORADOS/SUPER-ASTRO--DORADO.png',
   // },
+  sg: {
+    id: 6,
+    name: 'sg',
+    url: 'assets/NORMAL/SUPER-GORDO.png',
+    urlDorada: 'assets/DORADOS/SUPER-GORDO-DORADO.png',
+  },
   bp: {
     id: 11,
     name: 'bp',

@@ -22,6 +22,10 @@
   padding-top: 0px;
 }
 
+.center-conter {
+  display: grid;
+}
+
 .info {
   display: flex;
   align-items: center;
@@ -43,11 +47,10 @@
 
 .card-container {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 35px;
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 .card-row {
@@ -58,6 +61,7 @@
 .card-row-horizontal {
   display: flex;
   gap: 4vw;
+  justify-content: center;
 }
 
 .footer {

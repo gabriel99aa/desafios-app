@@ -10,6 +10,7 @@ import { LogoutComponent } from '../../../domain/models/logout/logout.component'
 import { HomeService } from '../../../domain/services/home.service';
 import { loading, logosObjects } from '.';
 import { FooterComponent } from '../../../domain/models/footer/footer.component';
+import { VerticalBigCardComponent } from '../../../domain/models/vertical-card-big/vertical-card.component';
 
 interface Marca {
   id: number;
@@ -29,6 +30,7 @@ interface Marca {
     CommonModule,
     SidebarComponent,
     VerticalCardComponent,
+    VerticalBigCardComponent,
     HorizontalCardComponent,
     GuideButtonComponent,
     AcomulatePointsComponent,
@@ -136,6 +138,8 @@ export class HomeComponent implements OnInit {
         this.fd = this.marca[this.marca.length - 1];
         this.pdv = data[2];
         this.cdr.markForCheck();
+
+        console.log('this.marca: ', this.marca);
       },
       error: (err) => {
         console.error('Error al obtener datos:', err);
